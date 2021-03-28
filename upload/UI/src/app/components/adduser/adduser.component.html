@@ -1,0 +1,26 @@
+<p>adduser Form!</p>
+<div class="container">
+    <form [formGroup]="userForm" enctype="multipart/form-data">
+      <label for="fname">First Name</label>
+      <input type="text" formControlName="firstName" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" formControlName="lastName" id="lname" name="lastname" placeholder="Your last name..">
+
+      <label for="email">Email</label>
+      <input type="email" formControlName="email" id="email" name="email" placeholder="Your email..">
+  
+      <label for="phone">Phone</label>
+      <input type="number" formControlName="phone" id="phone" name="phone" placeholder="Your phone..">
+
+      <label for="imagePath">Image</label>
+      <input type="file" formControlName="imagePath" (change)="onFileChanged($event)" id="imagePath" name="imagePath">
+
+      <!-- <label for="imagePath">Image</label>
+      <input type="file" formControlName="imagePat2h"  id="imagePath" name="imagePath"> -->
+  
+      <input type="submit" value="Submit" (click)="suubmitForm()">
+    </form>
+
+    <button (click)="resetForm()">Reset</button>
+  </div>
